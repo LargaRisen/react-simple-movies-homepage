@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieCard = ({movie}) =>{
+function MovieCard ({movie}) {
     return(
         <div className="movie">
           <div>

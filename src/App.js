@@ -7,7 +7,7 @@ import SearchIcon from "./search.svg";
 
 const API_URL = "http://www.omdbapi.com/?apikey=xxd162ca5xx";
 
-const App = () => {
+function App() {
   const [movies, setMovies] = useState();
   const [serchTerm, setserchTerm] = useState("");
 
@@ -39,7 +39,7 @@ const App = () => {
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
-            <MovieCard movie={movie} />
+            <MovieCard key={movie.imdbID} movie={movie} />
           ))}
         </div>
       ) : (
@@ -49,6 +49,6 @@ const App = () => {
       )}
     </div>
   );
-};
+}
 
 export default App;
